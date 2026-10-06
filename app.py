@@ -1,5 +1,11 @@
 materiais = []
 proximo_id = 1
+logado = False
+variable = 1
+numero_de_usuarios = []
+CPF = []
+Nusuarios = 0
+usuarios = 0
 
 def cadastrar_material():
     global proximo_id
@@ -50,7 +56,37 @@ def registrar_retirada():
             return
     print("Material não encontrado.")
 
+
+def Cadastro_de_usuario():
+    print("\nBen-vindo novo usuario!")
+    print("\nPrecisaremos de alguns dados seus, vamos lá?")
+    print("\nDigite agora o seu CPF:")
+    numeroCPF = input("")
+    CPF.append(numeroCPF)
+    print(CPF[1])
+
 def main():
+
+    while(logado == False):
+        print("\n=== Sistema de Almoxarifado ===")
+        print("1. Cadastro Usuario")
+        print("2. Login")
+        print("3. Sair.")
+        
+        
+
+        try:
+            numeroOpcao = input("Escolha uma opção: ").strip()
+            numero = int(numeroOpcao)
+
+        except:
+            print("Isso nao era um numero")x
+
+        match numero:
+            case 1: Cadastro_de_usuario()
+    
+
+
     while True:
         print("\n=== SISTEMA DE ALMOXARIFADO ===")
         print("1. Cadastrar Material (Create)")
